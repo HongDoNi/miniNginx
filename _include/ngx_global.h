@@ -1,0 +1,8 @@
+
+
+#ifndef MININGINX_NGX_GLOBAL_H
+#define MININGINX_NGX_GLOBAL_H
+
+
+
+#endif //MININGINX_NGX_GLOBAL_H
