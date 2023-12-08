@@ -19,7 +19,6 @@ char *gp_envmem = nullptr;
 
 int main(const int argc, const char* const * argv) {
     g_os_argv = (char**) argv;
-    for(int i = 0; )
 
     printf("end\n");
     return 0;
