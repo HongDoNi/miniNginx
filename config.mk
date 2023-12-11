@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 export BUILD_ROOT=$(shell pwd)
 
 export INCLUDE_PATH=$(BUILD_ROOT)/_include

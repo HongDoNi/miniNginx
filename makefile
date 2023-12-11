@@ -1,11 +1,8 @@
+SHELL := /bin/bash
 include config.mk
 
 all:
 	make -v
-	#echo $(BUILD_DIR)
-
-#	make -C $(BUILD_ROOT)/app/
-#	make -C $(BUILD_ROOT)/signal/
 
 	@for dir in $(BUILD_DIR); \
 	do \
