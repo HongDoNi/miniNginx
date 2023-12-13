@@ -10,19 +10,32 @@
 void sig_usr(int signo) {
     printf("收到信号: %d, pid is %d\n", signo, getpid());
     switch(signo) {
-        case(SIGCHLD):
-            pid_t pid = waitpid(-1, nullptr, WNOHANG);
-            if(pid == 0) {
-                printf("waitipid returns 0\n");
-                return;
-            }
-            else if(pid == -1) {
-                printf("waitpid error\n");
-            }
-            else {
-                printf("waitpid returns %d\n", pid);
-            }
-            break;
+    case(SIGCHLD):{
+        pid_t pid = waitpid(-1, nullptr, WNOHANG);
+        if(pid == 0) {
+            printf("waitipid returns 0\n");
+            return;
+        }
+        else if(pid == -1) {
+            printf("waitpid error\n");
+        }
+        else {
+            printf("waitpid returns %d\n", pid);
+        }
+    }
+        break;
+    case(SIGUSR1):{
+        printf("pid : %d  get signal : SIGUSR1 \n", getpid());
+        printf("sleep 10s \n");
+        sleep(10);
+        
+    }
+        break;
+    default: {
+        printf("get unknown signal\n");
+    }
+        break;
+    
     }
 }
 
@@ -77,7 +90,14 @@ int main(const int argc, const char* const * argv) {
 
     g_os_argv = (char**) argv;
 
-    ngx_daemon();
+    // ngx_daemon();
+
+    if(signal(SIGUSR1, sig_usr) == SIG_ERR) {
+        printf("signal error\n");
+    }
+    
+
+
 
     while(1) {
         sleep(1);
