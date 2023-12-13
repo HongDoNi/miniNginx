@@ -1,5 +1,6 @@
 #include <iostream>
 #include <signal.h>
+#include <sys/signal.h>
 #include <unistd.h>
 
 
@@ -30,9 +31,14 @@ int main(const int argc, const char* const * argv) {
     }
 
     sigemptyset(&newmask);
-    sigaddset(&newmask, SIGQUIT);
+    // 把newmask信号集置零
 
-    sigprocmask()
+    sigaddset(&newmask, SIGQUIT);
+    // 把newmask信号集中的sigquit位置1，屏蔽该信号
+
+    // sigprocmask()
+    sigprocmask(SIG_BLOCK, &newmask, &oldmask);
+    // SIG_BLOCK 意思是设置信号集，把当前信号集设为newmask，oldmask用于保存原有信号集
 
 
     while(1) {
