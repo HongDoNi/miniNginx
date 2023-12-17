@@ -2,3 +2,5 @@
 /app/dep
 /app/link_obj
 /miniNginx
+/.vscode
+/.DS_Store

@@ -1,9 +1,9 @@
 SHELL := /bin/bash
 ifeq ($(DEBUG),true)
-CC=g++ -g
+CC=g++ --std=c++20 -g
 VERSION=debug
 else
-CC=g++
+CC=g++ --std=c++20
 VERSION=release
 endif
 

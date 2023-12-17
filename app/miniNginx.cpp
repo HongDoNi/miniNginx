@@ -6,6 +6,8 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 
+#include "ngx_c_conf.h"
+#include "ngx_global.h"
 
 void sig_usr(int signo) {
     printf("收到信号: %d, pid is %d\n", signo, getpid());
@@ -96,13 +98,12 @@ int main(const int argc, const char* const * argv) {
         printf("signal error\n");
     }
     
+    CConfig* pconf = CConfig::getInstance();
 
-
-
-    while(1) {
+    // while(1) {
         sleep(1);
         printf("pid: %d sleep 1s\n", getpid());
-    }
+    // }
 
     printf("end\n");   
     return 0;
