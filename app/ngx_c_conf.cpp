@@ -20,14 +20,47 @@ CConfig::CConfig() {
 }
 
 bool CConfig::LoadConf(std::string fn) {
-    std::ifstream fp(fn);
+    std::ifstream fp;
+    fp.open(fn, std::ios::in);
 
     if(!fp.is_open()) {
         printf("open conf file error, check the filename\n");
         return false;
     }
-    
+    else {
+        std::string buffer;
+        while(getline(fp, buffer)) {
+            std::cout << buffer << "e" << std::endl;
+            if(buffer == "") std::cout << "empty line" << std::endl;
+            else {
+                auto l = buffer.end();
+                auto r = buffer.end();
+                auto temp = buffer.begin();
 
+                for(auto it = buffer.begin(); it != buffer.end(); ++ it) {
+                    std::string conf_name{""};
+                    std::string conf_value("");
+
+                    if(*it == ' ') {
+                        if(l != buffer.end()) {
+                            if(conf_name != "") {
+                                conf_value = buffer.substr(l, r)
+                            }
+                        }
+                        else continue;
+                    }
+                    else if(*it == '#') break;
+                    else {
+                        if(l == buffer.end()) l = it;
+                        else r = it;                        
+
+                    }
+                }
+            }
+        }
+            
+            
+    }
 
     return true;
 }

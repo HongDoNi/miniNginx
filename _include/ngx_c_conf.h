@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <unistd.h>
+#include <fstream>
 
 typedef struct {
     std::string conf_name;
