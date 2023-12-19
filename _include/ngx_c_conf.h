@@ -6,14 +6,20 @@
 #define MININGINX_NGX_C_CONF_H
 
 #include <iostream>
+#include <vector>
 #include <unistd.h>
+
+typedef struct {
+    std::string conf_name;
+    std::string conf_info;
+}CConfItem;
 
 class CConfig {
 private:
-    std::string mfile_name;
+    std::string m_file_name;
     
 private:
-    static CConfig* pmconf;
+    static CConfig* pm_conf;
 
 private:
     CConfig();
@@ -22,18 +28,23 @@ private:
 
 public: 
     ~CConfig() {}; // 单例类中的析构函数不要做delete pmconf的动作，会引起循环释放统一内存地址
-    bool LoadConf(std::string);
-    static CConfig* getInstance();
+    
+    static CConfig* GetInstance();
     static pthread_mutex_t mutex;
     class Garbo {
     public:
         Garbo() { printf("Garbo()\n"); }
         ~Garbo() {
-            if(pmconf) delete pmconf;
-            pmconf = nullptr;
+            if(pm_conf) delete pm_conf;
+            pm_conf = nullptr;
         }
     };
     static Garbo garbo; // 这个garbo难道不需要在哪里初始化吗？是因为被自动初始化吗？
+
+public:
+    bool LoadConf(std::string);
+    std::string GetConfInfo(std::string);
+    std::vector<CConfItem*> m_conf_item_list;
 
 };
 

@@ -1,17 +1,17 @@
 #include "ngx_c_conf.h"
 
-CConfig* CConfig::pmconf{nullptr};
+CConfig* CConfig::pm_conf{nullptr};
 pthread_mutex_t CConfig::mutex; // 这句不可少，虽然和类中那句是一样的，但类中的作用是申明，这里是初始化。
 
-CConfig* CConfig::getInstance() {
-    if(!pmconf) {
+CConfig* CConfig::GetInstance() {
+    if(!pm_conf) {
         pthread_mutex_lock(&mutex);
-        if(!pmconf) {
-            pmconf = new CConfig();
+        if(!pm_conf) {
+            pm_conf = new CConfig();
         }
         pthread_mutex_unlock(&mutex);
     }
-    return pmconf;
+    return pm_conf;
 }
 
 
@@ -20,9 +20,23 @@ CConfig::CConfig() {
 }
 
 bool CConfig::LoadConf(std::string fn) {
-    if(!fopen(fn.c_str(), "r")) {
+    std::ifstream fp(fn);
+
+    if(!fp.is_open()) {
         printf("open conf file error, check the filename\n");
         return false;
     }
+    
+
+
     return true;
 }
+
+std::string CConfig::GetConfInfo(std::string cn) {
+    for(auto i : m_conf_item_list) {
+        if((*i).conf_name == cn) return (*i).conf_info;
+    }
+    return std::string{"Not Found"};
+}
+
+

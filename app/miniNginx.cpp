@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <signal.h>
 #include <sys/signal.h>
 #include <sys/wait.h>
@@ -98,7 +99,10 @@ int main(const int argc, const char* const * argv) {
         printf("signal error\n");
     }
     
-    CConfig* pconf = CConfig::getInstance();
+    CConfig* pconf = CConfig::GetInstance();
+    if(!pconf -> LoadConf("./nginx.conf")) {
+        printf("LoadConf error\n");
+    }
 
     // while(1) {
         sleep(1);
