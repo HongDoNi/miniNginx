@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 
 #include "ngx_c_conf.h"
+#include "ngx_func.h"
 #include "ngx_global.h"
 
 void sig_usr(int signo) {
@@ -44,7 +45,7 @@ void sig_usr(int signo) {
 
 
 char **g_os_argv;
-char *gp_envmem = nullptr;
+char *new_environ = nullptr;
 int g_value = 0;
 
 int ngx_daemon() {
@@ -76,16 +77,7 @@ int ngx_daemon() {
         close(fd);
     }
 
-
-
-
-
-    
-
-
     return 0;
-
-
 }
 
 int main(const int argc, const char* const * argv) {
@@ -95,19 +87,30 @@ int main(const int argc, const char* const * argv) {
 
     // ngx_daemon();
 
-    if(signal(SIGUSR1, sig_usr) == SIG_ERR) {
-        printf("signal error\n");
-    }
+    // if(signal(SIGUSR1, sig_usr) == SIG_ERR) {
+    //     printf("signal error\n");
+    // }
     
+    ngx_init_setproctitle();
+
     CConfig* pconf = CConfig::GetInstance();
     if(!pconf -> LoadConf("./nginx.conf")) {
         printf("LoadConf error\n");
+        exit(1);
     }
 
-    // while(1) {
+    ngx_setproctitle("nginx: master process");
+
+
+
+
+
+
+
+    while(1) {
         sleep(1);
         printf("pid: %d sleep 1s\n", getpid());
-    // }
+    }
 
     printf("end\n");   
     return 0;

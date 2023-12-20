@@ -19,6 +19,13 @@ CConfig::CConfig() {
     pthread_mutex_init(&mutex, NULL);
 }
 
+CConfig::~CConfig() {
+    for(auto i : m_conf_item_list) {
+        delete i;
+    }
+    m_conf_item_list.clear();
+}
+
 bool CConfig::LoadConf(std::string fn) {
     std::ifstream fp;
     fp.open(fn, std::ios::in);
@@ -30,32 +37,26 @@ bool CConfig::LoadConf(std::string fn) {
     else {
         std::string buffer;
         while(getline(fp, buffer)) {
-            std::cout << buffer << "e" << std::endl;
-            if(buffer == "") std::cout << "empty line" << std::endl;
+
+            if(buffer == "" || buffer[0] == '#') continue;
             else {
-                auto l = buffer.end();
-                auto r = buffer.end();
-                auto temp = buffer.begin();
-
-                for(auto it = buffer.begin(); it != buffer.end(); ++ it) {
-                    std::string conf_name{""};
-                    std::string conf_value("");
-
-                    if(*it == ' ') {
-                        if(l != buffer.end()) {
-                            if(conf_name != "") {
-                                conf_value = buffer.substr(l, r)
-                            }
-                        }
-                        else continue;
-                    }
-                    else if(*it == '#') break;
-                    else {
-                        if(l == buffer.end()) l = it;
-                        else r = it;                        
-
-                    }
+                int mid = -1, l = -1, r = -1;
+                for(int i = 0; i < buffer.size(); ++ i) {
+                    if(buffer[i] == '=') mid = i;
+                    else if(buffer[i] == ' ') continue;
+                    else if(mid == -1) { mid = 0; l = i; }
+                    else if(mid != -1 && buffer[i] == ' ') r = i - 1;
+                    else continue;
                 }
+                if(mid != -1 && mid != 0) {
+                    std::string conf_n = buffer.substr(l, mid - l);
+                    std::string conf_v = buffer.substr(mid + 1, r - mid -1);
+                    printf("%s : %s \n", conf_n.c_str(), conf_v.c_str());
+                    CConfItem* pc = new CConfItem{conf_n, conf_v};
+                    this -> m_conf_item_list.push_back(pc);
+                    
+                }
+
             }
         }
             

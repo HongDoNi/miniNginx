@@ -28,7 +28,7 @@ private:
     CConfig& operator=(const CConfig& other) = delete;
 
 public: 
-    ~CConfig() {}; // 单例类中的析构函数不要做delete pmconf的动作，会引起循环释放统一内存地址
+    ~CConfig(); // 单例类中的析构函数不要做delete pmconf的动作，会引起循环释放统一内存地址
     
     static CConfig* GetInstance();
     static pthread_mutex_t mutex;
@@ -48,20 +48,6 @@ public:
     std::vector<CConfItem*> m_conf_item_list;
 
 };
-
-// CConfig* CConfig::pmconf{nullptr};
-// pthread_mutex_t CConfig::mutex; // 这句不可少，虽然和类中那句是一样的，但类中的作用是申明，这里是初始化。
-
-// CConfig* CConfig::getInstance() {
-//     if(!pmconf) {
-//         pthread_mutex_lock(&mutex);
-//         if(!pmconf) {
-//             pmconf = new CConfig();
-//         }
-//         pthread_mutex_unlock(&mutex);
-//     }
-//     return pmconf;
-// }
 
 
 

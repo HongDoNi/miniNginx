@@ -1,3 +1,5 @@
-//
-// Created by 张懿 on 2023/12/8.
-//
+#include "ngx_func.h"
+
+void Rtrim(std::string& s) {
+    
+}
