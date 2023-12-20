@@ -44,9 +44,12 @@ void sig_usr(int signo) {
 }
 
 
-char **g_os_argv;
-char *new_environ = nullptr;
+const char * const* g_os_argv;
+char *g_new_environ = nullptr;
+size_t g_environ_len = 0;
+
 int g_value = 0;
+
 
 int ngx_daemon() {
     int fd;
@@ -83,7 +86,7 @@ int ngx_daemon() {
 int main(const int argc, const char* const * argv) {
 
 
-    g_os_argv = (char**) argv;
+    g_os_argv = argv;
 
     // ngx_daemon();
 
@@ -101,6 +104,7 @@ int main(const int argc, const char* const * argv) {
 
     ngx_setproctitle("nginx: master process");
 
+    printf("g_environ%d\n")
 
 
 
