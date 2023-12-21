@@ -6,6 +6,6 @@ void Rtrim(std::string&);
 void Ltrim(std::string&);
 
 void ngx_init_setproctitle();
-void ngx_setproctitle(std::string);
+void ngx_setproctitle(const char*);
 
 #endif //MININGINX_NGX_FUNC_H

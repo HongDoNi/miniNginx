@@ -44,7 +44,7 @@ void sig_usr(int signo) {
 }
 
 
-const char * const* g_os_argv;
+char** g_os_argv;
 char *g_new_environ = nullptr;
 size_t g_environ_len = 0;
 
@@ -86,7 +86,7 @@ int ngx_daemon() {
 int main(const int argc, const char* const * argv) {
 
 
-    g_os_argv = argv;
+    g_os_argv = (char**)argv;
 
     // ngx_daemon();
 
@@ -94,7 +94,22 @@ int main(const int argc, const char* const * argv) {
     //     printf("signal error\n");
     // }
     
+    // printf("before:\n");
+    // printf("environ stard address: %p\n", environ[0]);
+    // printf("environ[0]: %s\n", environ[0]);
+    // printf("environ[1]: %s\n", environ[1]);
+    // printf("environ[2]: %s\n", environ[2]);
+    // printf("environ[3]: %s\n", environ[3]);
+    
+
     ngx_init_setproctitle();
+
+    // printf("after:\n");
+    // printf("environ stard address: %p\n", environ[0]);
+    // printf("environ[0]: %s\n", environ[0]);
+    // printf("environ[1]: %s\n", environ[1]);
+    // printf("environ[2]: %s\n", environ[2]);
+    // printf("environ[3]: %s\n", environ[3]);
 
     CConfig* pconf = CConfig::GetInstance();
     if(!pconf -> LoadConf("./nginx.conf")) {
@@ -102,18 +117,30 @@ int main(const int argc, const char* const * argv) {
         exit(1);
     }
 
-    ngx_setproctitle("nginx: master process");
+    // printf("before:\n");
+    // printf("argv[0]:%s\n", argv[0]);
+    // printf("strlen argv[0]: %zu\n", strlen(argv[0]));
+    // ngx_setproctitle("nginx: master");
+    // printf("after:\n");
+    // printf("argv[0]:%s\n", argv[0]);
+    // printf("strlen argv[0]: %zu\n", strlen(argv[0]));
 
-    printf("g_environ%d\n")
+    
 
 
 
 
 
 
-    while(1) {
+
+    // while(1) {
         sleep(1);
         printf("pid: %d sleep 1s\n", getpid());
+    // }
+
+    if(g_new_environ) {
+        delete [] g_new_environ;
+        g_new_environ = nullptr;
     }
 
     printf("end\n");   

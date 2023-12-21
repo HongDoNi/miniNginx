@@ -21,17 +21,20 @@ void ngx_init_setproctitle() {
     }
 }
 
-void ngx_setproctitle(const std::string title) {
-    size_t title_len = title.size();
-    
+void ngx_setproctitle(const char* title) {
+    size_t title_len = strlen(title);
     size_t argvs_len = 0;
+    
     for(int i = 0; g_os_argv[i]; ++ i) {
         argvs_len += strlen(g_os_argv[i]) + 1; 
     }
 
     size_t total_len = argvs_len + g_environ_len;
 
-    
-    // size_t esy = 
+    if(title_len > total_len) return;
 
+    char* ptmp = g_os_argv[0];
+    memcpy(ptmp, title, title_len);
+    ptmp +=  title_len;
+    memset(ptmp, 0, total_len - title_len);
 }
