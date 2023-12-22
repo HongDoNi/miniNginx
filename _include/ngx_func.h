@@ -2,6 +2,7 @@
 #define MININGINX_NGX_FUNC_H
 #include <iostream>
 #include <cstring>
+#include <cstdarg>
 
 
 
