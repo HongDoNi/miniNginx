@@ -10,6 +10,7 @@
 #include "ngx_c_conf.h"
 #include "ngx_func.h"
 #include "ngx_global.h"
+#include "ngx_marco.h"
 
 void sig_usr(int signo) {
     printf("收到信号: %d, pid is %d\n", signo, getpid());
@@ -85,53 +86,17 @@ int ngx_daemon() {
 
 int main(const int argc, const char* const * argv) {
 
-
     g_os_argv = (char**)argv;
-
-    // ngx_daemon();
-
-    // if(signal(SIGUSR1, sig_usr) == SIG_ERR) {
-    //     printf("signal error\n");
-    // }
-    
-    // printf("before:\n");
-    // printf("environ stard address: %p\n", environ[0]);
-    // printf("environ[0]: %s\n", environ[0]);
-    // printf("environ[1]: %s\n", environ[1]);
-    // printf("environ[2]: %s\n", environ[2]);
-    // printf("environ[3]: %s\n", environ[3]);
-    
 
     ngx_init_setproctitle();
 
-    // printf("after:\n");
-    // printf("environ stard address: %p\n", environ[0]);
-    // printf("environ[0]: %s\n", environ[0]);
-    // printf("environ[1]: %s\n", environ[1]);
-    // printf("environ[2]: %s\n", environ[2]);
-    // printf("environ[3]: %s\n", environ[3]);
 
     CConfig* pconf = CConfig::GetInstance();
     if(!pconf -> LoadConf("./nginx.conf")) {
         printf("LoadConf error\n");
         exit(1);
     }
-
-    // printf("before:\n");
-    // printf("argv[0]:%s\n", argv[0]);
-    // printf("strlen argv[0]: %zu\n", strlen(argv[0]));
-    // ngx_setproctitle("nginx: master");
-    // printf("after:\n");
-    // printf("argv[0]:%s\n", argv[0]);
-    // printf("strlen argv[0]: %zu\n", strlen(argv[0]));
-
-    
-
-
-
-
-
-
+    ngx_log_stderr(1, "abc");
 
     // while(1) {
         sleep(1);

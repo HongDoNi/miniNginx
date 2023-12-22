@@ -51,7 +51,7 @@ bool CConfig::LoadConf(std::string fn) {
                 if(mid != -1 && mid != 0) {
                     std::string conf_n = buffer.substr(l, mid - l);
                     std::string conf_v = buffer.substr(mid + 1, r - mid -1);
-                    printf("%s : %s \n", conf_n.c_str(), conf_v.c_str());
+                    // printf("%s : %s \n", conf_n.c_str(), conf_v.c_str());
                     CConfItem* pc = new CConfItem{conf_n, conf_v};
                     this -> m_conf_item_list.push_back(pc);
                     
@@ -62,6 +62,7 @@ bool CConfig::LoadConf(std::string fn) {
             
             
     }
+    fp.close();
 
     return true;
 }
