@@ -1,6 +1,8 @@
 #ifndef MININGINX_NGX_FUNC_H
 #define MININGINX_NGX_FUNC_H
 #include <iostream>
+#include <cstring>
+
 
 
 void Rtrim(std::string&);

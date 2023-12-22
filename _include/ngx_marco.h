@@ -1,6 +1,8 @@
 #ifndef MININGINX_NGX_MARCO_H
 #define MININGINX_NGX_MARCO_H
 
+#include <cstring>
+
 #define NGX_MAX_ERR_STR_LEN 2048
 
 #define ngx_memcpy(dst, src, n) (((u_char*)memcpy(dst, src, n)) + (n))
