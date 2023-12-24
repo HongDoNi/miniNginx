@@ -3,7 +3,8 @@
 #include <iostream>
 #include <cstring>
 #include <cstdarg>
-
+#include <sys/time.h>
+#include <unistd.h>
 
 
 void Rtrim(std::string&);
@@ -16,5 +17,8 @@ u_char* ngx_slprintf(u_char* buf, u_char* last, const char* fmt, ...);
 u_char* ngx_vslprintf(u_char*, u_char*, const char*, va_list);
 
 void ngx_log_stderr(int, const char*, ...);
+u_char* ngx_log_errno(u_char* , u_char* , int);
+void ngx_log_error_core(int , int, const char*, ...);
+void ngx_log_init();
 
 #endif //MININGINX_NGX_FUNC_H

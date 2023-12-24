@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "ngx_global.h"
 #include "ngx_func.h"
 #include "ngx_marco.h"
 
