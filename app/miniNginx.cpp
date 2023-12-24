@@ -93,26 +93,14 @@ int main(const int argc, const char* const * argv) {
 
     ngx_init_setproctitle();
 
-    ngx_log_init();
-    
-    ngx_log_stderr(0, "invalid option: \"%s\"", argv[0]);  //nginx: invalid option: "./nginx"
-    ngx_log_stderr(0, "invalid option: %10d", 21);         //nginx: invalid option:         21  ---21前面有8个空格
-    ngx_log_stderr(0, "invalid option: %.6f", 21.378);     //nginx: invalid option: 21.378000   ---%.这种只跟f配合有效，往末尾填充0
-    ngx_log_stderr(0, "invalid option: %.6f", 12.999);     //nginx: invalid option: 12.999000
-    ngx_log_stderr(0, "invalid option: %.2f", 12.999);     //nginx: invalid option: 13.00
-    ngx_log_stderr(0, "invalid option: %xd", 1678);        //nginx: invalid option: 68e
-    ngx_log_stderr(0, "invalid option: %Xd", 1678);        //nginx: invalid option: 68E
-    ngx_log_stderr(15, "invalid option: %s , %d", "testInfo",326);        //nginx: invalid option: testInfo , 326 (15: Block device required) 
-    ngx_log_stderr(0, "invalid option: %d", 1678);         //nginx: invalid option: 1678
-
     CConfig* pconf = CConfig::GetInstance();
-    if(!pconf -> LoadConf("./nginx.conf")) {
+    if(!pconf -> LoadConf("/Users/zy/CLionProjects/miniNginx/nginx.conf")) {
         printf("LoadConf error\n");
         exit(1);
     }
-    // ngx_log_stderr(1, "abc");
 
-    // ngx_log_error_core(0, 0, "jack");
+    ngx_log_init();
+
     // while(1) {
         sleep(1);
         printf("pid: %d sleep 1s\n", getpid());

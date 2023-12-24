@@ -3,6 +3,8 @@ project(miniNginx)
 
 set(CMAKE_CXX_STANDARD 23)
 
+include_directories(${PROJECT_SOURCE_DIR}/_include)
+
 add_executable(miniNginx app/miniNginx.cpp
         _include/ngx_signal.h
         app/ngx_setproctitle.cpp
@@ -11,4 +13,7 @@ add_executable(miniNginx app/miniNginx.cpp
         _include/ngx_global.h
         _include/ngx_c_conf.h
         _include/ngx_func.h
-        app/ngx_string.cpp)
+        _include/ngx_marco.h
+        app/ngx_string.cpp
+        app/ngx_log.cpp
+        app/ngx_printf.cpp)

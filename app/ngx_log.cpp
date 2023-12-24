@@ -36,17 +36,12 @@ void ngx_log_stderr(int err, const char* fmt, ...) {
     p_cur = ngx_vslprintf(p_cur, last, fmt, args);
     va_end(args);
 
-    // if(err) {
-    //     p = 
-    // }
-
-    *p_cur ++ = '\n';
-
     if(err) {
         p_cur = ngx_log_errno(p_cur, last, err);
     }
 
-
+    *p_cur ++ = '\n';
+    write(STDERR_FILENO,errstr,p_cur - errstr);
 
 }
 
