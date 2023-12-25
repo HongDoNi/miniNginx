@@ -21,4 +21,6 @@ u_char* ngx_log_errno(u_char* , u_char* , int);
 void ngx_log_error_core(int , int, const char*, ...);
 void ngx_log_init();
 
+int ngx_init_signals();
+
 #endif //MININGINX_NGX_FUNC_H

@@ -54,6 +54,7 @@ int g_value = 0;
 
 
 int ngx_daemon() {
+    
     int fd;
 
     int pid = fork();
@@ -86,6 +87,7 @@ int ngx_daemon() {
 }
 
 int main(const int argc, const char* const * argv) {
+    int exitcode = 0;
 
     ngx_pid = getpid();
 
@@ -94,24 +96,36 @@ int main(const int argc, const char* const * argv) {
     ngx_init_setproctitle();
 
     CConfig* pconf = CConfig::GetInstance();
-    if(!pconf -> LoadConf("/Users/zy/CLionProjects/miniNginx/nginx.conf")) {
-        printf("LoadConf error\n");
-        exit(1);
+    if(!pconf -> LoadConf("./nginx.conf")) {
+        // printf("LoadConf error\n");
+        ngx_log_stderr(0, "Config File loaded fail");
+        exitcode = 2;
+        goto lblexit;
     }
 
     ngx_log_init();
+
+    if(ngx_init_signals() != 0) {
+        ngx_log_stderr(0, "Init Signals fail");
+        exitcode = 1;
+        goto lblexit;
+    }
 
     // while(1) {
         sleep(1);
         printf("pid: %d sleep 1s\n", getpid());
     // }
 
+    
+
+lblexit:
     if(g_new_environ) {
         delete [] g_new_environ;
         g_new_environ = nullptr;
     }
 
+
     printf("end\n");   
-    return 0;
+    return exitcode;
 
 }
