@@ -12,39 +12,6 @@
 #include "ngx_global.h"
 #include "ngx_marco.h"
 
-void sig_usr(int signo) {
-    printf("收到信号: %d, pid is %d\n", signo, getpid());
-    switch(signo) {
-    case(SIGCHLD):{
-        pid_t pid = waitpid(-1, nullptr, WNOHANG);
-        if(pid == 0) {
-            printf("waitipid returns 0\n");
-            return;
-        }
-        else if(pid == -1) {
-            printf("waitpid error\n");
-        }
-        else {
-            printf("waitpid returns %d\n", pid);
-        }
-    }
-        break;
-    case(SIGUSR1):{
-        printf("pid : %d  get signal : SIGUSR1 \n", getpid());
-        printf("sleep 10s \n");
-        sleep(10);
-        
-    }
-        break;
-    default: {
-        printf("get unknown signal\n");
-    }
-        break;
-    
-    }
-}
-
-
 char** g_os_argv;
 char *g_new_environ = nullptr;
 size_t g_environ_len = 0;
@@ -94,6 +61,7 @@ int main(const int argc, const char* const * argv) {
     g_os_argv = (char**)argv;
 
     ngx_init_setproctitle();
+    ngx_setproctitle("miniNgx: master");
 
     CConfig* pconf = CConfig::GetInstance();
     if(!pconf -> LoadConf("./nginx.conf")) {
@@ -111,9 +79,11 @@ int main(const int argc, const char* const * argv) {
         goto lblexit;
     }
 
+    ngx_master_process_cycle();
+
     // while(1) {
-        sleep(1);
-        printf("pid: %d sleep 1s\n", getpid());
+    //     sleep(1);
+    //     printf("pid: %d sleep 1s\n", getpid());
     // }
 
     

@@ -5,6 +5,9 @@
 #include <cstdarg>
 #include <sys/time.h>
 #include <unistd.h>
+#include <sys/stat.h>
+#include <signal.h>
+#include <fcntl.h>
 
 
 void Rtrim(std::string&);
@@ -22,5 +25,7 @@ void ngx_log_error_core(int , int, const char*, ...);
 void ngx_log_init();
 
 int ngx_init_signals();
+
+void ngx_master_process_cycle();
 
 #endif //MININGINX_NGX_FUNC_H

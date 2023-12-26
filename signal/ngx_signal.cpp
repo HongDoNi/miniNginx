@@ -22,6 +22,7 @@ ngx_signal_t signals[] = {
     {SIGQUIT, "SIGQUIT", ngx_signal_handler},
     {SIGIO, "SIGIO", ngx_signal_handler},
     {SIGSYS, "SIGSYS, SIG_INT", nullptr},
+    {SIGUSR1, "SIGUSR1", ngx_signal_handler},
     {0, nullptr, nullptr}
 };
 
