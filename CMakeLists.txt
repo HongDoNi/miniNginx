@@ -16,4 +16,5 @@ add_executable(miniNginx app/miniNginx.cpp
         _include/ngx_marco.h
         app/ngx_string.cpp
         app/ngx_log.cpp
-        app/ngx_printf.cpp)
+        app/ngx_printf.cpp
+        proc/ngx_process_cycle.cpp)

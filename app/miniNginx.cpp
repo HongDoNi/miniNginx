@@ -61,7 +61,7 @@ int main(const int argc, const char* const * argv) {
     g_os_argv = (char**)argv;
 
     ngx_init_setproctitle();
-    ngx_setproctitle("miniNgx: master");
+    // ngx_setproctitle("miniNgx: master");
 
     CConfig* pconf = CConfig::GetInstance();
     if(!pconf -> LoadConf("./nginx.conf")) {
@@ -81,10 +81,10 @@ int main(const int argc, const char* const * argv) {
 
     ngx_master_process_cycle();
 
-    // while(1) {
-    //     sleep(1);
-    //     printf("pid: %d sleep 1s\n", getpid());
-    // }
+    while(1) {
+        sleep(1);
+        printf("pid: %d sleep 1s\n", getpid());
+    }
 
     
 

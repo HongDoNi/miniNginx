@@ -42,28 +42,22 @@ void ngx_master_process_cycle() {
     CConfig* p_conf = CConfig::GetInstance();
     int process_count = stoi(p_conf -> GetConfInfo("WorkerProcesses"));
 
-    ngx_setproctitle("nginx:  master");
+    ngx_setproctitle("miniNgx: master ");
 
-    // ngx_start_worker_processes(process_count);
+    // ngx_log_stderr(0,"worker counts: %d", process_count);
+
+    ngx_start_worker_processes(process_count);
 
     sigemptyset(&set);
+    sigprocmask(SIG_SETMASK, &set, nullptr);
+    
 
     while(1) {
-        ngx_log_error_core(0,0, "this parent process, pid is %d", getpid());
+        sleep(5);
+        ngx_log_error_core(0,0, "this MASTER process, pid is %d", getpid());
     }
 
-    // setsid();
-    
-    // umask(0);
-
-    // int fd = open("/dev/null", O_RDWR);
-
-    // if(dup2(fd, STDIN_FILENO) == -1) exit(1);
-    // if(dup2(fd, STDOUT_FILENO) == -1) exit(1);
-
-    // if(fd > STDERR_FILENO) {
-    //     close(fd);
-    // }
+   
 
 }
 
@@ -77,13 +71,16 @@ void ngx_spawn_process() {
     pid_t pid = fork();
     if(pid > 0 ){
         // parent process
+        return;
+
     }
     else if(!pid) {
         // child process
         ngx_worker_process_cycle();
     }
     else {
-        ngx_log_stderr(0, "Fork process fail");
+        ngx_log_stderr(0, "Fork process FAIL");
+        ngx_log_error_core(NGX_LOG_ALERT, errno, "ngx_spawn_process().fork() FAIL");
     }
 
 }
@@ -92,13 +89,32 @@ void ngx_worker_process_cycle() {
     ngx_worker_process_init();
 
     ngx_setproctitle("miniNgx: worker");
+    while(1) {
+        ngx_log_error_core(0,0, "this WORKER process, pid is %d", getpid());
 
-    sleep(1);
+        sleep(1);
+    }
+    
 }
 
 void ngx_worker_process_init() {
     sigset_t set;
-    sigprocmask(SIG_SETMASK, &set, nullptr);
+    sigemptyset(&set);
+
+    sigaddset(&set, SIGCHLD);
+    sigaddset(&set, SIGALRM);
+    sigaddset(&set, SIGIO);
+    sigaddset(&set, SIGINT);
+    sigaddset(&set, SIGHUP);
+    sigaddset(&set, SIGUSR1);
+    sigaddset(&set, SIGUSR2);
+    sigaddset(&set, SIGWINCH);
+    sigaddset(&set, SIGTERM);
+    sigaddset(&set, SIGQUIT);
+
+    if(sigprocmask(SIG_SETMASK, &set, nullptr) == -1) {
+        ngx_log_error_core(NGX_LOG_ALERT, errno, "ngx_worker_process_init()中sigpromask()失败");
+    }
 
 
 }

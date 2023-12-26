@@ -23,12 +23,14 @@ ngx_signal_t signals[] = {
     {SIGIO, "SIGIO", ngx_signal_handler},
     {SIGSYS, "SIGSYS, SIG_INT", nullptr},
     {SIGUSR1, "SIGUSR1", ngx_signal_handler},
+    {SIGUSR2, "SIGUSR2", ngx_signal_handler},
     {0, nullptr, nullptr}
 };
 
 int ngx_init_signals() {
     ngx_signal_t *sig;
     struct sigaction sa;
+
     
     for(sig = signals; sig -> signo != 0; ++ sig) {
         memset(&sa, 0, sizeof(sa));
@@ -42,6 +44,7 @@ int ngx_init_signals() {
         }
 
         sigemptyset(&sa.sa_mask);
+        
 
         if(sigaction(sig->signo, &sa, nullptr) == -1) {
             ngx_log_error_core(NGX_LOG_EMERG, errno, "sigaction(%s) failed", sig->signame);
@@ -62,25 +65,15 @@ int ngx_init_signals() {
 static void ngx_signal_handler(int signo, siginfo_t *siginfo, void* ucontext) {
    
     ngx_log_stderr(0,"收到信号: %d, pid is %d\n", signo, getpid());
+    ngx_log_error_core(0,0,"收到信号: %d, pid is %d\n", signo, getpid());
+    sleep(5);
     switch(signo) {
     case(SIGCHLD):{
-        // pid_t pid = waitpid(-1, nullptr, WNOHANG);
-        // if(pid == 0) {
-        //     printf("waitipid returns 0\n");
-        //     return;
-        // }
-        // else if(pid == -1) {
-        //     printf("waitpid error\n");
-        // }
-        // else {
-        //     printf("waitpid returns %d\n", pid);
-        // }
+        
     }
         break;
     case(SIGUSR1):{
-        // printf("pid : %d  get signal : SIGUSR1 \n", getpid());
-        // printf("sleep 10s \n");
-        // sleep(10);
+        
         
     }
         break;
