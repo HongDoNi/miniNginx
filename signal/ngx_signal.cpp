@@ -141,6 +141,10 @@ static void ngx_process_get_status() {
                 continue;
             }
 
+            if(err == ECHILD && one ) {
+                return;
+            }
+
             if(err == ECHILD) {
                 ngx_log_error_core(NGX_LOG_INFO, err, "waitpid() FAIL");
                 return;
