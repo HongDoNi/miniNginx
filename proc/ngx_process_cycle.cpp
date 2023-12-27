@@ -50,6 +50,9 @@ void ngx_master_process_cycle() {
 
     sigemptyset(&set);
     sigprocmask(SIG_SETMASK, &set, nullptr);
+
+    
+    // sigsuspend(&set); 
     
 
     while(1) {
