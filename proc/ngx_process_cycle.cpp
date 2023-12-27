@@ -89,6 +89,8 @@ void ngx_spawn_process() {
 }
 
 void ngx_worker_process_cycle() {
+    
+    ngx_process = NGX_WORKER_PROCESS;
     ngx_worker_process_init();
 
     ngx_setproctitle("miniNgx: worker");
@@ -104,16 +106,16 @@ void ngx_worker_process_init() {
     sigset_t set;
     sigemptyset(&set);
 
-    sigaddset(&set, SIGCHLD);
-    sigaddset(&set, SIGALRM);
-    sigaddset(&set, SIGIO);
-    sigaddset(&set, SIGINT);
-    sigaddset(&set, SIGHUP);
-    sigaddset(&set, SIGUSR1);
-    sigaddset(&set, SIGUSR2);
-    sigaddset(&set, SIGWINCH);
-    sigaddset(&set, SIGTERM);
-    sigaddset(&set, SIGQUIT);
+    // sigaddset(&set, SIGCHLD);
+    // sigaddset(&set, SIGALRM);
+    // sigaddset(&set, SIGIO);
+    // sigaddset(&set, SIGINT);
+    // sigaddset(&set, SIGHUP);
+    // sigaddset(&set, SIGUSR1);
+    // sigaddset(&set, SIGUSR2);
+    // sigaddset(&set, SIGWINCH);
+    // sigaddset(&set, SIGTERM);
+    // sigaddset(&set, SIGQUIT);
 
     if(sigprocmask(SIG_SETMASK, &set, nullptr) == -1) {
         ngx_log_error_core(NGX_LOG_ALERT, errno, "ngx_worker_process_init()中sigpromask()失败");

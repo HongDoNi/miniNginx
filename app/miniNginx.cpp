@@ -15,13 +15,17 @@
 char** g_os_argv;
 char *g_new_environ = nullptr;
 size_t g_environ_len = 0;
-pid_t ngx_pid;
+bool g_enable_daemon = false;
+pid_t ngx_master_pid;
+int ngx_process;
+sig_atomic_t ngx_reap;
 
 int g_value = 0;
 
+void free_source();
 
 int ngx_daemon() {
-    
+    ngx_process = NGX_MASTER_PROCESS;
     int fd;
 
     int pid = fork();
@@ -55,10 +59,12 @@ int ngx_daemon() {
 
 int main(const int argc, const char* const * argv) {
     int exitcode = 0;
-
-    ngx_pid = getpid();
+    ngx_reap = 0;
+    ngx_master_pid = getpid();
 
     g_os_argv = (char**)argv;
+
+    ngx_log.fd = -1;
 
     ngx_init_setproctitle();
     // ngx_setproctitle("miniNgx: master");
@@ -79,6 +85,22 @@ int main(const int argc, const char* const * argv) {
         goto lblexit;
     }
 
+    if(stoi(pconf -> GetConfInfo("Daemon")) == 1) {
+        int res_daemon = ngx_enable_daemon();
+        if(res_daemon == -1) {
+            exitcode = 1;
+            goto lblexit;
+        }
+        else if(res_daemon == 1) {
+            free_source();
+            exitcode = 0;
+            return exitcode;
+        }
+        g_enable_daemon = true;
+        
+    }
+    
+
     ngx_master_process_cycle();
 
     while(1) {
@@ -98,4 +120,15 @@ lblexit:
     printf("end\n");   
     return exitcode;
 
+}
+
+void free_source() {
+    if(g_new_environ) {
+        delete [] g_new_environ;
+        g_new_environ = nullptr;
+    }
+    if(ngx_log.fd != STDERR_FILENO && ngx_log.fd != -1){
+        close(ngx_log.fd);
+        ngx_log.fd = -1;
+    }
 }

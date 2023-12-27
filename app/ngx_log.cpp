@@ -99,7 +99,7 @@ void ngx_log_error_core(int level, int err, const char* fmt, ...) {
 
     p = ngx_memcpy(errstr, strcurrtime, strlen((const char*)strcurrtime));
     p = ngx_slprintf(p, last, " [%s] ", err_levels[level]);
-    p = ngx_slprintf(p, last, "%P: ", ngx_pid);
+    p = ngx_slprintf(p, last, "%P: ", ngx_master_pid);
 
     va_start(args, fmt);
     p = ngx_vslprintf(p, last, fmt, args);

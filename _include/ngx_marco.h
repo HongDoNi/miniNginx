@@ -17,6 +17,9 @@
 #define NGX_LOG_INFO              7    //信息 【info】
 #define NGX_LOG_DEBUG             8    //调试 【debug】：最低级别
 
+#define NGX_MASTER_PROCESS 0
+#define NGX_WORKER_PROCESS 1
+
 #define NGX_ERROR_LOG_PATH       "logs/error1.log"   //定义日志存放的路径和文件名
 
 #endif

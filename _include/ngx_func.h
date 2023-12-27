@@ -26,6 +26,7 @@ void ngx_log_init();
 
 int ngx_init_signals();
 
+int ngx_enable_daemon();
 void ngx_master_process_cycle();
 
 #endif //MININGINX_NGX_FUNC_H
