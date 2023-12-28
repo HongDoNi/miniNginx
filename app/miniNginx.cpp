@@ -11,6 +11,7 @@
 #include "ngx_func.h"
 #include "ngx_global.h"
 #include "ngx_marco.h"
+#include "ngx_socket.h"
 
 char** g_os_argv;
 char *g_new_environ = nullptr;
@@ -19,6 +20,7 @@ bool g_enable_daemon = false;
 pid_t ngx_master_pid;
 int ngx_process;
 sig_atomic_t ngx_reap;
+CSocket g_socket;
 
 int g_value = 0;
 
@@ -81,6 +83,11 @@ int main(const int argc, const char* const * argv) {
 
     if(ngx_init_signals() != 0) {
         ngx_log_stderr(0, "Init Signals fail");
+        exitcode = 1;
+        goto lblexit;
+    }
+
+    if(!g_socket.initialize()) {
         exitcode = 1;
         goto lblexit;
     }

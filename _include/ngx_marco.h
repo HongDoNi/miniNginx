@@ -5,6 +5,8 @@
 
 #define NGX_MAX_ERR_STR_LEN 2048
 
+#define NGX_LISTEN_BACKOG 511
+
 #define ngx_memcpy(dst, src, n) (((u_char*)memcpy(dst, src, n)) + (n))
 
 #define NGX_LOG_STDERR            0    //控制台错误【stderr】：最高级别日志，日志的内容不再写入log参数指定的文件，而是会直接将日志输出到标准错误设备比如控制台屏幕
