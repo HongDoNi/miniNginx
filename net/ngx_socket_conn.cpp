@@ -5,6 +5,7 @@
 
 
 ngx_connections_t* CSocket::ngx_get_connection(int fd) {
+    // 从连接池中拿出一个空闲的连接
     ngx_connections_t* c = m_pfree_connection;
     
     if(!c) {

@@ -4,6 +4,7 @@
 #define MININGINX_NGX_GLOBAL_H
 
 
+#include <csignal>
 
 extern char* g_new_environ;
 extern char** environ;

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdarg>
 #include <fcntl.h>
+#include <unistd.h>
 
 #include "ngx_global.h"
 #include "ngx_marco.h"

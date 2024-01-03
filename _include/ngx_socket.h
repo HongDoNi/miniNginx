@@ -3,10 +3,12 @@
 #include <vector>
 #include <sys/epoll.h>
 
+class CSocket;
+
 struct ngx_listen_ports_t;
 struct ngx_connections_t;
 
-typedef void (*ngx_event_handler_pt)(ngx_connections_t *c);
+typedef void (CSocket::*ngx_event_handler_pt)(ngx_connections_t *c);
 
 struct ngx_listen_ports_t{
     int port;

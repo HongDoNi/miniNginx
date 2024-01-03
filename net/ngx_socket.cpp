@@ -5,6 +5,7 @@
 #include <sys/ioctl.h>
 #include <string>
 #include <cstdint>
+#include <unistd.h>
 
 
 #include "ngx_socket.h"
@@ -16,9 +17,7 @@
 
 
 
-ngx_connections_t* ngx_get_connection(int fd) {
 
-}
 
 CSocket::~CSocket() {
     if(!m_listen_socket_list.empty()) {
@@ -158,9 +157,9 @@ int CSocket::ngx_epoll_init() {
         p_conn -> p_listen_port = (*pos);
         (*pos) -> p_connection = p_conn;
 
-        p_conn -> read_handler = &ngx_event_accept;
+        p_conn -> read_handler = &CSocket::ngx_event_accept;
 
-        if(ngx_epoll_add_event((*pos) -> fd, 1, 0, 0, EPOLL_CTL_ADD, c) == -1) {
+        if(ngx_epoll_add_event((*pos) -> fd, 1, 0, 0, EPOLL_CTL_ADD, p_conn) == -1) {
             ngx_log_stderr(errno, "CScoket::epoll_init::ngx_epll_add_event FAIL");
             exit(2);
         }
@@ -170,7 +169,8 @@ int CSocket::ngx_epoll_init() {
 
 }
 
-int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent, uint32_t otherflag, uint32_t eventtype, ngx_connections_t* c) {
+int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent, 
+                uint32_t otherflag, uint32_t eventtype, ngx_connections_t* c) {
     struct epoll_event ev;
     memset(&ev, 0, sizeof(ev));
 
@@ -190,13 +190,13 @@ int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent, uint32_t
     }
 
     if(otherflag) {
-        en.events |= otherflag;
+        ev.events |= otherflag;
     }
 
     // ev.data.ptr = (void*)((uintptr_t)c|c->instance);
     // 这个还不知道啥用处
 
-    if(epoll_ctl(m_epoll_handle, eventtpye, fd, &ev) == -1) {
+    if(epoll_ctl(m_epoll_handle, eventtype, fd, &ev) == -1) {
         ngx_log_stderr(errno, "ngx_epoll_add_event FAIL");
         return -1;
     }
@@ -205,5 +205,5 @@ int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent, uint32_t
 }
 
 int CSocket::ngx_epoll_process_events(int timer) {
-    
+    return 0;
 }
