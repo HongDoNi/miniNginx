@@ -4,6 +4,7 @@
 #include <errno.h>
 #include <sys/ioctl.h>
 #include <string>
+#include <cstdint>
 
 
 #include "ngx_socket.h"
@@ -14,6 +15,11 @@
 
 
 
+
+ngx_connections_t* ngx_get_connection(int fd) {
+
+}
+
 CSocket::~CSocket() {
     if(!m_listen_socket_list.empty()) {
         for(auto i : m_listen_socket_list) delete i;
@@ -21,6 +27,7 @@ CSocket::~CSocket() {
 }
 
 bool CSocket::initialize() {
+    read_conf();
     if(ngx_open_listening_sockets())
         return true;
     else
@@ -29,7 +36,7 @@ bool CSocket::initialize() {
 
 bool CSocket::ngx_open_listening_sockets() {
     CConfig* p_config = CConfig::GetInstance();
-    this -> m_listen_socket_count = stoi(p_config -> GetConfInfo("ListenPortCount"));
+    // this -> m_listen_socket_count = stoi(p_config -> GetConfInfo("ListenPortCount"));
 
     int isocket;
     struct sockaddr_in serv_addr;
@@ -76,10 +83,10 @@ bool CSocket::ngx_open_listening_sockets() {
 
         }
 
-        ListenSocket* p_listen_socket = new ListenSocket();
-        memset(p_listen_socket, 0, sizeof(ListenSocket));
+        ngx_listen_ports_t* p_listen_socket = new ngx_listen_ports_t();
+        memset(p_listen_socket, 0, sizeof(ngx_listen_ports_t));
         p_listen_socket -> port = iport;
-        p_listen_socket -> listen_fd = isocket;
+        p_listen_socket -> fd = isocket;
         ngx_log_error_core(NGX_LOG_INFO, 0, "Listen Port%d, Success", iport);
         m_listen_socket_list.push_back(p_listen_socket);
 
@@ -92,7 +99,7 @@ bool CSocket::ngx_open_listening_sockets() {
 void CSocket::ngx_close_listening_sockets() {
     if(!m_listen_socket_list.empty()) {
         for(auto i : m_listen_socket_list) {
-            close(i -> listen_fd);
+            close(i -> fd);
         }
     }
 }
@@ -103,4 +110,100 @@ bool CSocket::set_noblocking(int socket_fd) {
         return false;
     }
     return true;
+}
+
+void CSocket::read_conf() {
+    CConfig *p_config = CConfig::GetInstance();
+    m_worker_connections = stoi(p_config -> GetConfInfo("Worker_Connections"));
+    m_listen_socket_count = stoi(p_config -> GetConfInfo("ListenPortCount"));
+    return;
+
+}
+
+int CSocket::ngx_epoll_init() {
+    m_epoll_handle = epoll_create(m_worker_connections);
+    if(m_epoll_handle == -1) {
+        ngx_log_stderr(errno, "CSocket::ngx_epoll_create FAIL");
+        exit(2);
+    }
+
+    m_total_conn_n = m_worker_connections;
+    m_pconnections_head = new ngx_connections_t[m_total_conn_n];
+
+    int i = m_total_conn_n;
+    ngx_connections_t* next = nullptr;
+    ngx_connections_t* p_conn = m_pconnections_head;
+
+    do {
+        i --;
+        p_conn[i].next = next;
+        p_conn[i].fd = -1;
+        p_conn[i].connection_index = 0;
+        
+        next = &p_conn[i]; 
+
+    }while(i);
+
+    m_pfree_connection = m_pconnections_head;
+    m_free_conn_n = m_worker_connections;
+
+    std::vector<ngx_listen_ports_t*>::iterator pos;
+    for(pos = m_listen_socket_list.begin(); pos != m_listen_socket_list.end(); ++ pos) {
+        p_conn = ngx_get_connection((*pos) -> fd);
+        if(!p_conn) {
+            ngx_log_stderr(errno, "CSocket::ngx_epoll_init::ngx_get_connection FAIL");
+            exit(2);
+        }
+
+        p_conn -> p_listen_port = (*pos);
+        (*pos) -> p_connection = p_conn;
+
+        p_conn -> read_handler = &ngx_event_accept;
+
+        if(ngx_epoll_add_event((*pos) -> fd, 1, 0, 0, EPOLL_CTL_ADD, c) == -1) {
+            ngx_log_stderr(errno, "CScoket::epoll_init::ngx_epll_add_event FAIL");
+            exit(2);
+        }
+    }
+
+    return 1;
+
+}
+
+int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent, uint32_t otherflag, uint32_t eventtype, ngx_connections_t* c) {
+    struct epoll_event ev;
+    memset(&ev, 0, sizeof(ev));
+
+    if(readevent) {
+        // do sth
+        ev.events = EPOLLIN|EPOLLRDHUP;
+    }
+    else {
+
+    }
+
+    if(writeevent) {
+        // do sth
+    }
+    else {
+        
+    }
+
+    if(otherflag) {
+        en.events |= otherflag;
+    }
+
+    // ev.data.ptr = (void*)((uintptr_t)c|c->instance);
+    // 这个还不知道啥用处
+
+    if(epoll_ctl(m_epoll_handle, eventtpye, fd, &ev) == -1) {
+        ngx_log_stderr(errno, "ngx_epoll_add_event FAIL");
+        return -1;
+    }
+
+    return 1;
+}
+
+int CSocket::ngx_epoll_process_events(int timer) {
+    
 }
