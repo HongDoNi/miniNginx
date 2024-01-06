@@ -28,6 +28,7 @@ ngx_signal_t signals[] = {
     {SIGSYS, "SIGSYS, SIG_INT", nullptr},
     {SIGUSR1, "SIGUSR1", ngx_signal_handler},
     {SIGUSR2, "SIGUSR2", ngx_signal_handler},
+    // {SIGTRAP, "SIGTRAP", ngx_signal_handler},
     {0, nullptr, nullptr}
 };
 

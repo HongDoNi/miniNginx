@@ -5,6 +5,7 @@
 
 
 #include <csignal>
+#include "ngx_socket.h"
 
 extern char* g_new_environ;
 extern char** environ;
@@ -14,6 +15,7 @@ extern pid_t ngx_master_pid;
 extern bool g_enable_daemon;
 extern int ngx_process;
 extern sig_atomic_t ngx_reap;
+extern CSocket g_socket;
 
 typedef unsigned char u_char;
 

@@ -26,38 +26,6 @@ int g_value = 0;
 
 void free_source();
 
-int ngx_daemon() {
-    ngx_process = NGX_MASTER_PROCESS;
-    int fd;
-
-    int pid = fork();
-    if(pid < 0) {
-        printf("fork fail\n");
-        return 1;
-    }
-    else if(pid == 0) {
-        printf("子进程, pid : %d \n", getpid());
-    }
-    else {
-        printf("父进程, pid : %d \n", getpid());
-        exit(0);
-    }
-
-    setsid();
-    
-    umask(0);
-
-    fd = open("/dev/null", O_RDWR);
-
-    if(dup2(fd, STDIN_FILENO) == -1) exit(1);
-    if(dup2(fd, STDOUT_FILENO) == -1) exit(1);
-
-    if(fd > STDERR_FILENO) {
-        close(fd);
-    }
-
-    return 0;
-}
 
 int main(const int argc, const char* const * argv) {
     int exitcode = 0;
