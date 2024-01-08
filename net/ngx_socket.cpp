@@ -6,6 +6,7 @@
 #include <string>
 #include <cstdint>
 #include <unistd.h>
+#include <sys/epoll.h>
 
 
 #include "ngx_socket.h"
@@ -137,6 +138,7 @@ int CSocket::ngx_epoll_init() {
         i --;
         p_conn[i].next = next;
         p_conn[i].fd = -1;
+        p_conn[i].instance = 1;
         p_conn[i].connection_index = 0;
         
         next = &p_conn[i]; 
@@ -205,5 +207,63 @@ int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent,
 }
 
 int CSocket::ngx_epoll_process_events(int timer) {
-    return 0;
+    int events = epoll_wait(m_epoll_handle, m_events, NGX_MAX_EPOLL_EVENTS, -1);
+
+    if(events == -1) {
+        if(errno == EINTR) {
+            ngx_log_error_core(NGX_LOG_INFO, errno, "CSocket::ngx_epoll_process_events().epoll_wait() FAIL1");
+            return 1;
+        }
+        else {
+        ngx_log_error_core(NGX_LOG_ALERT, errno, "CSocket::ngx_epoll_process_events().epoll_wait() FAIL2");
+        return 0;
+    }
+    }
+    
+
+    if(events == 0) {
+        if(timer != -1) {
+            return 1;
+        }
+        ngx_log_error_core(NGX_LOG_ALERT, 0, "CSocket::epoll_wait time out with 0 events");
+        return 0;
+    }
+
+    ngx_connections_t *c;
+    uintptr_t instance;
+    uint32_t revents;
+
+    for(int i = 0; i < events; ++ i) {
+        c = (ngx_connections_t*)(m_events[i].data.ptr);
+        // epoll有个方便的地方就是可以返回用户自定义的数据结构
+        instance = (uintptr_t)c & 1;
+        c = (ngx_connections_t*)((uintptr_t)c & (uintptr_t)~1);
+
+        if(c -> fd == -1) {
+            ngx_log_error_core(NGX_LOG_DEBUG, 0, "CSocket::ngx_epoll_process_events fd = -1");
+            continue;
+        }
+
+        if(c -> instance != instance) {
+            ngx_log_error_core(NGX_LOG_DEBUG, 0, "CSocket::ngx_epoll_process_events() instance FAIL");
+            continue;
+        }
+
+        revents = m_events[i].events;
+        if(revents & (EPOLLERR|EPOLLHUP)) {
+            revents |= EPOLLIN | EPOLLOUT;
+        }
+
+        if(revents & EPOLLIN) {
+            // (this -> * (c -> read_handler))(c);
+            // ->和* 之间是否与空格决定了这条语句是否能通过编译，到低是为啥？
+            (this->* (c->read_handler) )(c);
+
+        }
+
+        if(revents & EPOLLOUT) {
+            // to do 
+        }
+    }
+    return 1;    
 }

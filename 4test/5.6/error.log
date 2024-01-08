@@ -1,0 +1,755 @@
+2024/01/07 15:35:57 [info] 3143680: 监听8990端口成功!
+2024/01/07 15:35:57 [notice] 3143681: master process ./nginx 3143681 启动并开始运行......!
+2024/01/07 15:35:57 [notice] 3143682: worker process 3143682 启动并开始运行......!
+2024/01/07 15:35:57 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:45 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:45 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:45 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:46 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:46 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:46 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:47 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:47 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:47 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:48 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:48 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:48 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:49 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:49 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:49 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:50 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:50 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:50 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:51 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:51 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:51 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:52 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:52 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:52 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:53 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:53 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:53 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:54 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:54 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:54 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:55 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:55 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:55 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:56 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:56 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:56 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:57 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:57 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:57 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:58 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:58 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:58 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:36:59 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:36:59 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:36:59 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:00 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:00 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:00 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:01 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:01 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:01 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:02 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:02 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:02 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:03 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:03 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:03 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:04 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:04 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:04 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:05 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:05 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:05 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:06 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:06 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:06 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:07 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:07 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:07 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:08 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:08 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:08 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:09 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:09 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:09 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:10 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:10 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:10 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:11 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:11 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:11 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:12 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:12 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:12 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:13 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:13 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:13 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:14 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:14 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:14 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:15 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:15 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:15 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:16 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:16 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:16 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:17 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:17 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:17 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:18 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:18 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:18 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:19 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:19 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:19 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:20 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:20 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:20 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:21 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:21 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:21 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:22 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:22 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:22 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:23 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:23 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:23 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:24 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:24 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:24 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:25 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:25 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:25 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:26 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:26 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:26 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:27 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:27 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:27 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:28 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:28 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:28 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:29 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:29 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:29 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:30 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:30 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:30 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:31 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:31 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:31 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:32 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:32 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:32 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:33 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:33 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:33 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:34 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:34 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:34 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:35 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:35 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:35 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:36 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:36 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:36 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:37 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:37 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:37 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:38 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:38 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:38 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:39 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:39 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:39 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:40 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:40 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:40 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:41 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:41 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:41 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:42 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:42 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:42 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:43 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:43 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:43 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:44 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:44 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:44 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:45 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:45 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:45 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:46 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:46 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:46 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:47 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:47 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:47 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:48 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:48 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:48 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:49 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:49 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:49 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:50 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:50 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:50 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:51 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:51 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:51 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:52 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:52 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:52 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:53 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:53 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:53 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:54 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:54 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:54 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:55 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:55 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:55 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:56 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:56 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:56 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:57 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:57 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:57 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:58 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:58 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:58 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:37:59 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:37:59 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:37:59 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:00 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:00 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:00 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:01 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:01 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:01 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:02 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:02 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:02 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:03 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:03 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:03 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:04 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:04 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:04 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:05 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:05 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:05 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:06 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:06 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:06 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:07 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:07 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:07 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:08 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:08 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:08 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:09 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:09 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:09 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:10 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:10 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:10 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:11 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:11 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:11 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:12 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:12 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:12 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:13 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:13 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:13 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:14 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:14 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:14 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:15 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:15 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:15 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:16 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:16 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:16 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:17 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:17 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:17 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:38:18 [stderr] 3143682: nginx: doing ngx_event_accept handler
+2024/01/07 15:38:18 [stderr] 3143682: doing ngx_event_accept handler
+2024/01/07 15:38:18 [stderr] 3143682: this WORKER process, pid is 3143682
+2024/01/07 15:56:55 [info] 3151997: 监听8990端口成功!
+2024/01/07 15:56:55 [notice] 3151998: master process ./nginx 3151998 启动并开始运行......!
+2024/01/07 15:56:55 [notice] 3151999: worker process 3151999 启动并开始运行......!
+2024/01/07 15:56:55 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:14 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:14 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:14 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:15 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:15 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:15 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:16 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:16 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:16 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:17 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:17 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:17 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:18 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:18 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:18 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:19 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:19 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:19 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:20 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:20 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:20 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:21 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:21 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:21 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:22 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:22 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:22 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:23 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:23 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:23 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:24 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:24 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:24 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:25 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:25 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:25 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:26 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:26 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:26 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:27 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:27 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:27 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:28 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:28 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:28 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:29 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:29 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:29 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:30 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:30 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:30 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:31 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:31 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:31 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:32 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:32 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:32 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:33 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:33 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:33 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:34 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:34 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:34 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:35 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:35 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:35 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:36 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:36 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:36 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:37 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:37 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:37 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:38 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:38 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:38 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:39 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:39 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:39 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:40 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:40 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:40 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:41 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:41 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:41 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:42 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:42 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:42 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:43 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:43 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:43 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:44 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:44 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:44 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:45 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:45 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:45 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:46 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:46 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:46 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:47 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:47 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:47 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:48 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:48 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:48 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:49 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:49 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:49 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:50 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:50 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:50 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 15:57:51 [stderr] 3151999: nginx: doing ngx_event_accept handler
+2024/01/07 15:57:51 [stderr] 3151999: doing ngx_event_accept handler
+2024/01/07 15:57:51 [stderr] 3151999: this WORKER process, pid is 3151999
+2024/01/07 19:17:11 [info] 3226603: 监听8990端口成功!
+2024/01/07 19:17:11 [info] 3226603: 监听443端口成功!
+2024/01/07 19:17:11 [notice] 3226604: master process ./nginx 3226604 启动并开始运行......!
+2024/01/07 19:17:11 [notice] 3226605: worker process 3226605 启动并开始运行......!
+2024/01/07 19:17:11 [stderr] 3226605: this WORKER process, pid is 3226605
+2024/01/07 19:17:11 [notice] 3226606: worker process 3226606 启动并开始运行......!
+2024/01/07 19:17:11 [stderr] 3226606: this WORKER process, pid is 3226606
+2024/01/07 21:11:44 [info] 3228166: 监听8990端口成功!
+2024/01/07 21:11:44 [info] 3228166: 监听443端口成功!
+2024/01/07 21:27:12 [info] 3276244: 监听8990端口成功!
+2024/01/07 21:27:12 [info] 3276244: 监听443端口成功!
+2024/01/07 21:28:06 [notice] 3277016: master process /home/z/Documents/cppProjects/miniNginx/4test/5.6/nginx 3277016 启动并开始运行......!
+2024/01/07 21:28:06 [notice] 3277017: worker process 3277017 启动并开始运行......!
+2024/01/07 21:28:06 [stderr] 3277017: this WORKER process, pid is 3277017
+2024/01/07 21:28:06 [notice] 3277018: worker process 3277018 启动并开始运行......!
+2024/01/07 21:28:06 [stderr] 3277018: this WORKER process, pid is 3277018
+2024/01/07 21:36:53 [info] 3280273: 监听8990端口成功!
+2024/01/07 21:36:53 [info] 3280273: 监听443端口成功!
+2024/01/07 21:37:02 [notice] 3280950: master process /home/z/Documents/cppProjects/miniNginx/4test/5.6/nginx 3280950 启动并开始运行......!
+2024/01/07 21:37:02 [notice] 3280956: worker process 3280956 启动并开始运行......!
+2024/01/07 21:37:02 [stderr] 3280956: this WORKER process, pid is 3280956
+2024/01/07 21:37:02 [notice] 3280957: worker process 3280957 启动并开始运行......!
+2024/01/07 21:37:02 [stderr] 3280957: this WORKER process, pid is 3280957
+2024/01/07 21:49:23 [info] 3286013: 监听8990端口成功!
+2024/01/07 21:49:23 [info] 3286013: 监听443端口成功!
+2024/01/07 21:51:28 [notice] 3286359: master process /home/z/Documents/cppProjects/miniNginx/4test/5.6/nginx 3286359 启动并开始运行......!
+2024/01/07 21:52:01 [notice] 3287461: worker process 3287461 启动并开始运行......!
+2024/01/07 21:52:01 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:55:33 [notice] 3287460: worker process 3287460 启动并开始运行......!
+2024/01/07 21:55:35 [stderr] 3287460: this WORKER process, pid is 3287460
+2024/01/07 21:56:43 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:43 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:44 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:44 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:45 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:45 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:46 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:46 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:47 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:47 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:48 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:48 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:49 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:49 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:50 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:50 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:51 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:51 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:52 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:52 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:53 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:53 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:54 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:54 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:55 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:55 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:56 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:56 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:57 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:57 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:58 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:58 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:56:59 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:56:59 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:00 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:00 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:01 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:01 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:02 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:02 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:03 [stderr] 3287460: doing ngx_event_accept handler
+2024/01/07 21:57:03 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:03 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:04 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:04 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:05 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:05 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:06 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:06 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:07 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:07 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:08 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:08 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:09 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:09 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:10 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:10 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:11 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:11 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:12 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:12 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:13 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:13 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:14 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:14 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:15 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:15 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:16 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:16 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:17 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:17 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:18 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:18 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:19 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:19 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:20 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:20 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:21 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:21 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:22 [stderr] 3287460: this WORKER process, pid is 3287460
+2024/01/07 21:57:22 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:22 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:23 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:23 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:24 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:24 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:25 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:25 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:26 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:26 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:27 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:27 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:28 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:28 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:29 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:29 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:30 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:30 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:31 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:31 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:32 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:32 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:33 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:33 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:34 [stderr] 3287460: doing ngx_event_accept handler
+2024/01/07 21:57:34 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:34 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:35 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:35 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:36 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:36 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:37 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:37 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:38 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:38 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:39 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:39 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:40 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:40 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:41 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:41 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:42 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:42 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:43 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:43 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:44 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:44 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:45 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:45 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:46 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:46 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:47 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:47 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:48 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:48 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:49 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:49 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:50 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:50 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:51 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:51 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:52 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:52 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:53 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:53 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:54 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:54 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:55 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:55 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:56 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:56 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:57 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:57 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:58 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:58 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:57:59 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:57:59 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:00 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:00 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:01 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:01 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:02 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:02 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:03 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:03 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:04 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:04 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:05 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:05 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:06 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:06 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:07 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:07 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:08 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:08 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:09 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:09 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:10 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:10 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:11 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:11 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:12 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:12 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:13 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:13 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:14 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:14 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:15 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:15 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:16 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:16 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:17 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:17 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:18 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:18 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:19 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:19 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:20 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:20 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:21 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:21 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:22 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:22 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:23 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:23 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:24 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:24 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:25 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:25 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:26 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:26 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:27 [stderr] 3287460: this WORKER process, pid is 3287460
+2024/01/07 21:58:27 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:27 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:28 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:28 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:29 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:29 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:30 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:30 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:31 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:31 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:32 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:32 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:33 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:33 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:34 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:34 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:35 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:35 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:36 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:36 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:37 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:37 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:38 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:38 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:39 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:39 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:40 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:40 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:41 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:41 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:42 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:42 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:43 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:43 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:44 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:44 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:45 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:45 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:46 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:46 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:47 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:47 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:48 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:48 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:49 [stderr] 3287460: doing ngx_event_accept handler
+2024/01/07 21:58:49 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:49 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:50 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:50 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:51 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:51 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:52 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:52 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:53 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:53 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:54 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:54 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:55 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:55 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:56 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:56 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:57 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:57 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:58 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:58 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:58:59 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:58:59 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:00 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:00 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:01 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:01 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:02 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:02 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:03 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:03 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:04 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:04 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:05 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:05 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:06 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:06 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:07 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:07 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:08 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:08 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:09 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:09 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:10 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:10 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:11 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:11 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:12 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:12 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:13 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:13 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:14 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:14 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:15 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:15 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:16 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:16 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:17 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:17 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:18 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:18 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:19 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:19 [stderr] 3287461: this WORKER process, pid is 3287461
+2024/01/07 21:59:20 [stderr] 3287461: doing ngx_event_accept handler
+2024/01/07 21:59:20 [stderr] 3287461: this WORKER process, pid is 3287461

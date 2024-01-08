@@ -7,11 +7,11 @@ CC=g++ --std=c++2a
 VERSION=release
 endif
 
-SRCS=$(wildcard *.cpp)
+SRCS=$(wildcard *.cxx)
 
-OBJS=$(SRCS:.cpp=.o)
+OBJS=$(SRCS:.cxx=.o)
 
-DEPS=$(SRCS:.cpp=.d)
+DEPS=$(SRCS:.cxx=.d)
 
 BIN:=$(addprefix $(BUILD_ROOT)/,$(BIN))
 
@@ -39,10 +39,10 @@ $(BIN):$(LINK_OBJ)
 	$(CC) -o $@ $^
 
 # 对这个%的匹配还是不懂
-$(LINK_OBJ_DIR)/%.o:%.cpp
-	$(CC) -I$(INCLUDE_PATH) -o $@ -c $(filter %.cpp,$^)
+$(LINK_OBJ_DIR)/%.o:%.cxx
+	$(CC) -I$(INCLUDE_PATH) -o $@ -c $(filter %.cxx,$^)
 
-$(DEP_DIR)/%.d:%.cpp
+$(DEP_DIR)/%.d:%.cxx
 	echo $(OBJS)
 	echo -n $(LINK_OBJ_DIR)/ > $@
 # 这里需要注意，因为gcc -MM生成的语句头中对于目标只有目标名称，不带地址，所以要自己加上地址

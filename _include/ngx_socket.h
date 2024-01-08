@@ -2,6 +2,9 @@
 
 #include <vector>
 #include <sys/epoll.h>
+#include <sys/socket.h>
+
+#include "ngx_marco.h"
 
 class CSocket;
 
@@ -23,7 +26,10 @@ struct ngx_connections_t{
 
     ngx_listen_ports_t *p_listen_port;
 
+
+    unsigned int instance:1;
     uint64_t connection_index;  // 
+    struct sockaddr client_addr; 
 
     ngx_event_handler_pt write_handler; // 写事件处理函数
     ngx_event_handler_pt read_handler; 
@@ -45,6 +51,8 @@ public:
     int m_free_conn_n; // 连接池中空闲的连接数
 
     std::vector<ngx_listen_ports_t*> m_listen_socket_list;
+
+    struct epoll_event m_events[NGX_MAX_EPOLL_EVENTS];
 
 public:
     CSocket() = default;

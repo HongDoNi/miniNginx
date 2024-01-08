@@ -6,7 +6,7 @@
 void CSocket::ngx_event_accept(ngx_connections_t* oldc) {
     // do sth
 
-    ngx_log_stderr(0, "doing ngx_event_accept handler");
+    // ngx_log_stderr(0, "doing ngx_event_accept handler");
     ngx_log_error_core(0,0, "doing ngx_event_accept handler");
     
 }

@@ -100,6 +100,8 @@ void ngx_worker_process_cycle() {
     while(1) {
         ngx_log_error_core(0,0, "this WORKER process, pid is %d", getpid());
 
+        ngx_process_events_and_timers();
+
         sleep(1);
     }
     

@@ -6,6 +6,7 @@
 #define NGX_MAX_ERR_STR_LEN 2048
 
 #define NGX_LISTEN_BACKOG 511
+#define NGX_MAX_EPOLL_EVENTS 512
 
 #define ngx_memcpy(dst, src, n) (((u_char*)memcpy(dst, src, n)) + (n))
 

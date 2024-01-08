@@ -17,12 +17,15 @@ ngx_connections_t* CSocket::ngx_get_connection(int fd) {
     m_free_conn_n --;
 
     uint64_t index = c -> connection_index;
+    uintptr_t instance = c -> instance;
 
     memset(c, 0, sizeof(ngx_connections_t));
     c -> fd = fd;
 
+    c -> instance  = !instance;
     c -> connection_index = index;
     c -> connection_index ++;
 
     return c;
 }
+

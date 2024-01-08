@@ -164,6 +164,8 @@ static void ngx_worker_process_cycle(int inum,const char *pprocname)
     //setvbuf(stdout,NULL,_IONBF,0); //这个函数. 直接将printf缓冲区禁止， printf就直接输出了。
     for(;;)
     {
+        ngx_log_error_core(0,0, "this WORKER process, pid is %d", getpid());
+        sleep(1);
 
         //先sleep一下 以后扩充.......
         //printf("worker进程休息1秒");       
