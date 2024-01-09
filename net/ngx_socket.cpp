@@ -15,7 +15,10 @@
 #include "ngx_marco.h"
 
 
-
+CSocket::CSocket() {
+    m_pkg_head_len = sizeof(COMM_PKG_HEADER);
+    m_pkg_msg_len = sizeof(COMM_MSG_HEADER);
+}
 
 
 

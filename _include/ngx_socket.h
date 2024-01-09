@@ -5,6 +5,7 @@
 #include <sys/socket.h>
 
 #include "ngx_marco.h"
+#include "ngx_comm.h"
 
 class CSocket;
 
@@ -35,6 +36,15 @@ struct ngx_connections_t{
 
     ngx_event_handler_pt write_handler; // 写事件处理函数
     ngx_event_handler_pt read_handler; 
+
+    unsigned char curStat;
+    char data_head[_DATA_BUFSIZE_];
+    char *precvbuf;
+    unsigned int irecvlen;
+    bool if_new_mem;
+    char *p_new_mem;
+
+
 
     ngx_connections_t *next;  // 所有的连接信息保存在一段连续的内存中，next指向下一个连接信息地址块
 
@@ -69,11 +79,13 @@ public:
     int ngx_epoll_add_event(int fd, int readevent, int writeevent, uint32_t otherflag, uint32_t eventtype, ngx_connections_t* c);
     int ngx_epoll_process_events(int timer);
 
-public:
+private:
 
     // handlers
     void ngx_event_accept(ngx_connections_t*);
     void ngx_wait_request_handler(ngx_connections_t*);
+    void ngx_wait_request_handler_proc_p1(ngx_connections_t*);
+    void ngx_wait_request_handler_proc_plast(ngx_connections_t*); 
 
 private:
     bool ngx_open_listening_sockets();
@@ -82,6 +94,11 @@ private:
     ngx_connections_t* ngx_get_connection(int);
     void read_conf();
     size_t ngx_sock_ntop(struct sockaddr *sa,int port,u_char *text,size_t len);
-    void ngx_close_accepted_connection(ngx_connections_t* c);
+    void ngx_close_connection(ngx_connections_t* c);
     void ngx_free_connection(ngx_connections_t* c);
+
+    ssize_t recvproc(ngx_connections_t*, char*, ssize_t);
+
+    size_t m_pkg_head_len;
+    size_t m_pkg_msg_len;
 };
