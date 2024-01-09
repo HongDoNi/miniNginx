@@ -195,7 +195,7 @@ int CSocket::ngx_epoll_add_event(int fd, int readevent, int writeevent,
         ev.events |= otherflag;
     }
 
-    // ev.data.ptr = (void*)((uintptr_t)c|c->instance);
+    ev.data.ptr = (void*)((uintptr_t)c|c->instance);
     // 这个还不知道啥用处
 
     if(epoll_ctl(m_epoll_handle, eventtype, fd, &ev) == -1) {

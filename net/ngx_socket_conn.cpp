@@ -29,3 +29,15 @@ ngx_connections_t* CSocket::ngx_get_connection(int fd) {
     return c;
 }
 
+void CSocket::ngx_free_connection(ngx_connections_t *c) {
+    c -> next = m_pfree_connection;
+    ++ c -> connection_index;
+
+    m_pfree_connection = c;
+    ++m_free_conn_n;
+    return;
+
+    // free connection之后，原来申请的那段内存中各个ngx_connection_t之间的链表顺序是会打乱的，但是这不影响这段内存的释放，毕竟我是知道这段内存的头地址的
+    
+}
+

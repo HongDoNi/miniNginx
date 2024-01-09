@@ -18,6 +18,7 @@ void ngx_setproctitle(const char*);
 
 u_char* ngx_slprintf(u_char* buf, u_char* last, const char* fmt, ...);
 u_char* ngx_vslprintf(u_char*, u_char*, const char*, va_list);
+u_char *ngx_snprintf(u_char *buf, size_t max, const char *fmt, ...);
 
 void ngx_log_stderr(int, const char*, ...);
 u_char* ngx_log_errno(u_char* , u_char* , int);

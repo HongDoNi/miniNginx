@@ -31,6 +31,8 @@ struct ngx_connections_t{
     uint64_t connection_index;  // 
     struct sockaddr client_addr; 
 
+    uint8_t write_ready;
+
     ngx_event_handler_pt write_handler; // 写事件处理函数
     ngx_event_handler_pt read_handler; 
 
@@ -71,6 +73,7 @@ public:
 
     // handlers
     void ngx_event_accept(ngx_connections_t*);
+    void ngx_wait_request_handler(ngx_connections_t*);
 
 private:
     bool ngx_open_listening_sockets();
@@ -78,5 +81,7 @@ private:
     bool set_noblocking(int socket_fd);
     ngx_connections_t* ngx_get_connection(int);
     void read_conf();
-
+    size_t ngx_sock_ntop(struct sockaddr *sa,int port,u_char *text,size_t len);
+    void ngx_close_accepted_connection(ngx_connections_t* c);
+    void ngx_free_connection(ngx_connections_t* c);
 };
