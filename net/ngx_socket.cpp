@@ -13,6 +13,7 @@
 #include "ngx_c_conf.h"
 #include "ngx_func.h"
 #include "ngx_marco.h"
+#include "ngx_comm.h"
 
 
 CSocket::CSocket() {

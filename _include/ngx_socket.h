@@ -1,11 +1,12 @@
 #pragma once
 
 #include <vector>
+#include <list>
 #include <sys/epoll.h>
 #include <sys/socket.h>
 
 #include "ngx_marco.h"
-#include "ngx_comm.h"
+// #include "ngx_comm.h"
 
 class CSocket;
 
@@ -67,7 +68,7 @@ public:
     struct epoll_event m_events[NGX_MAX_EPOLL_EVENTS];
 
 public:
-    CSocket() = default;
+    CSocket();
 
     ~CSocket();
 
@@ -101,4 +102,9 @@ private:
 
     size_t m_pkg_head_len;
     size_t m_pkg_msg_len;
+
+    std::list<char*> m_msg_recv_queue;
+    void in_to_msg_recv_queue(char*);
+    void out_from_msg_recv_queue();
+    void clean_msg_recv_queue();
 };

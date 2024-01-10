@@ -25,4 +25,14 @@
 
 #define NGX_ERROR_LOG_PATH       "logs/error1.log"   //定义日志存放的路径和文件名
 
+#define _PKG_MAX_LENGTH 30000
+
+#define _PKG_HD_INIT 0
+#define _PKG_HD_RECVING 1
+#define _PKG_BD_INIT 2
+#define _PKG_BD_RECVING 3
+
+#define _DATA_BUFSIZE_ 20 // 用来存包头的缓冲区
+
+
 #endif
