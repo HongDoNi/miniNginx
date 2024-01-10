@@ -125,6 +125,12 @@ void ngx_worker_process_init() {
     if(sigprocmask(SIG_SETMASK, &set, nullptr) == -1) {
         ngx_log_error_core(NGX_LOG_ALERT, errno, "ngx_worker_process_init()中sigpromask()失败");
     }
+    CConfig* p_config = CConfig::GetInstance();
+    int threads_num = stoi(p_config -> GetConfInfo("ProcMsgRecvWorkThreadCount"));
+    if(g_threadpool.call_threads(threads_num) == false) {
+        exit(-2);
+    }
+    
 
     g_socket.ngx_epoll_init();
 

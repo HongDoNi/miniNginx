@@ -12,6 +12,7 @@
 #include "ngx_global.h"
 #include "ngx_marco.h"
 #include "ngx_socket.h"
+#include "ngx_threadpool.h"
 
 char** g_os_argv;
 char *g_new_environ = nullptr;
@@ -21,6 +22,8 @@ pid_t ngx_master_pid;
 int ngx_process;
 sig_atomic_t ngx_reap;
 CSocket g_socket;
+CThreadPool g_threadpool;
+
 
 int g_value = 0;
 

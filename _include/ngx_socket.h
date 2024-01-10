@@ -104,7 +104,9 @@ private:
     size_t m_pkg_msg_len;
 
     std::list<char*> m_msg_recv_queue;
-    void in_to_msg_recv_queue(char*);
+    int m_msg_recv_count_;
+    void in_to_msg_recv_queue(char*, int&);
     void out_from_msg_recv_queue();
     void clean_msg_recv_queue();
+    pthread_mutex_t m_msg_recv_queue_mutex_;
 };

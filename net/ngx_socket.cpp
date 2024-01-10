@@ -19,6 +19,7 @@
 CSocket::CSocket() {
     m_pkg_head_len = sizeof(COMM_PKG_HEADER);
     m_pkg_msg_len = sizeof(COMM_MSG_HEADER);
+    pthread_mutex_init(&m_msg_recv_queue_mutex_, nullptr);
 }
 
 
@@ -28,6 +29,7 @@ CSocket::~CSocket() {
     if(!m_listen_socket_list.empty()) {
         for(auto i : m_listen_socket_list) delete i;
     }
+    pthread_mutex_destroy(&m_msg_recv_queue_mutex_);
 }
 
 bool CSocket::initialize() {

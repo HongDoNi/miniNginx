@@ -6,6 +6,7 @@
 
 #include <csignal>
 #include "ngx_socket.h"
+#include "ngx_threadpool.h"
 
 extern char* g_new_environ;
 extern char** environ;
@@ -16,6 +17,8 @@ extern bool g_enable_daemon;
 extern int ngx_process;
 extern sig_atomic_t ngx_reap;
 extern CSocket g_socket;
+
+extern CThreadPool g_threadpool;
 
 typedef unsigned char u_char;
 

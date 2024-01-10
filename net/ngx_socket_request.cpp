@@ -7,6 +7,8 @@
 // #include "ngx_marco.h"
 #include "ngx_memory.h"
 #include "ngx_comm.h"
+#include "ngx_lockmutex.h"
+#include "ngx_global.h"
 
 
 
@@ -154,7 +156,12 @@ void CSocket::ngx_wait_request_handler_proc_p1(ngx_connections_t* c) {
 
 void CSocket::ngx_wait_request_handler_proc_plast(ngx_connections_t* c) {
     // todo 把收到的内容放到消息队列中
-    in_to_msg_recv_queue(c -> p_new_mem);
+    int irmqc = 0;
+
+    in_to_msg_recv_queue(c -> p_new_mem, irmqc);
+
+    g_threadpool.call_threads(irmqc);
+
 
     c -> if_new_mem = false;
     c -> p_new_mem = nullptr;
@@ -165,8 +172,11 @@ void CSocket::ngx_wait_request_handler_proc_plast(ngx_connections_t* c) {
 
 }
 
-void CSocket::in_to_msg_recv_queue(char* msg) {
+void CSocket::in_to_msg_recv_queue(char* msg, int& irmqc) {
+    CLock lock(&m_msg_recv_queue_mutex_);
     m_msg_recv_queue.push_back(msg);
+    ++ m_msg_recv_count_;
+    irmqc = m_msg_recv_count_;
 
 }
 void CSocket::out_from_msg_recv_queue() {
