@@ -104,7 +104,9 @@ void ngx_worker_process_cycle() {
 
         sleep(1);
     }
-    
+    g_threadpool.stop_all_threads();
+
+    return;
 }
 
 void ngx_worker_process_init() {
@@ -127,10 +129,10 @@ void ngx_worker_process_init() {
     }
     CConfig* p_config = CConfig::GetInstance();
     int threads_num = stoi(p_config -> GetConfInfo("ProcMsgRecvWorkThreadCount"));
-    if(g_threadpool.call_threads(threads_num) == false) {
+    if(g_threadpool.create_threads(threads_num) == false) {
         exit(-2);
     }
-    
+   
 
     g_socket.ngx_epoll_init();
 

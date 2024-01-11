@@ -36,7 +36,7 @@ endif
 
 $(BIN):$(LINK_OBJ)
 	@echo "------------------------build $(VERSION) mode--------------------------------!!!"
-	$(CC) -o $@ $^
+	$(CC) -o $@ $^ -lpthread
 
 # 对这个%的匹配还是不懂
 $(LINK_OBJ_DIR)/%.o:%.cpp

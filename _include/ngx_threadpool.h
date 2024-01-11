@@ -31,14 +31,14 @@ private:
 
 private:
     static pthread_mutex_t m_threadpool_mutex_;
-    static pthread_cond_t m_pthreadpool_cond_;
-    // static bool m_shutdown_;
+    static pthread_cond_t m_threadpool_cond_;
+    static bool m_shutdown_;
 
     int m_thread_num;
 
     std::atomic<int> m_running_thread_num;
-    // time_t m_last_emergence_time;
+    time_t m_last_emergence_time;
 
-    std::vector<ThreadItem_> m_threads;
+    std::vector<ThreadItem_*> m_threads;
     
 };

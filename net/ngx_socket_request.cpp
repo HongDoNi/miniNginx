@@ -179,27 +179,26 @@ void CSocket::in_to_msg_recv_queue(char* msg, int& irmqc) {
     irmqc = m_msg_recv_count_;
 
 }
-void CSocket::out_from_msg_recv_queue() {
-    if(!m_msg_recv_queue.empty()) {
-        int msg_list_size = m_msg_recv_queue.size();
-        if(msg_list_size < 1000) return;
-        else {
-            CMemory* p_memory = CMemory::get_instance();
-            for(int i = 0; i < msg_list_size - 500; ++ i) {
-                char* item = m_msg_recv_queue.front();
-                m_msg_recv_queue.pop_front();
-                p_memory -> free_memory(item);
 
-            }
-        }
+char* CSocket::out_from_msg_recv_queue() {
+    CLock lock(&m_msg_recv_queue_mutex_);
+    if(m_msg_recv_queue.empty()) {
+        return nullptr;
     }
-    return;
+    char *p_msg_content = m_msg_recv_queue.front();
+    m_msg_recv_queue.pop_front();
+    -- m_msg_recv_count_;
+    return p_msg_content;
+
+    
 }
+
 void CSocket::clean_msg_recv_queue() {
     CMemory* p_memory = CMemory::get_instance();
 
     for(auto item : m_msg_recv_queue) {
         p_memory -> free_memory(item);
+
     }
     m_msg_recv_queue.clear();
 }

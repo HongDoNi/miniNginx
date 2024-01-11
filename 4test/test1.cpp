@@ -1,25 +1,32 @@
+// 测试全全局变量能否用于进程间通信
 #include <iostream>
+#include <unistd.h>
 
-typedef unsigned long           uintptr_t;
+using namespace std;
 
-typedef struct stu{
-    const char* name;
-    unsigned int age;
-}STU;
+
+int *pi = new int{20};
 
 int main() {
-    int i = 0;
-    printf("sizeof int : %lu\n", sizeof(i));
-    printf("sizeof uintptr_t : %lu\n", sizeof(uintptr_t));
-    STU *p = new STU;
-    printf("%lu\n", sizeof(p));
-    printf("%p\n", p);
-    uintptr_t p2 = (uintptr_t) p | 1;
-    // printf("%p\n", p2);
-    // unsigned int p3 = (unsigned int)p & 1;
-    p = (STU*)((uintptr_t)p | 1);
-    uintptr_t a = (uintptr_t)~1;
-    p = (STU*)((uintptr_t)p & (uintptr_t) ~1);
+    pid_t pid  = fork();
+    if(pid > 0) {
+        // parent
+        *pi = 100;
+        
+        while(true) {
+            sleep(1);
+        }
+    } 
+    else if(pid == 0) {
+        // child
+        *pi = 200;
+        while(true) {
+            sleep(1);
+        }
+    }
+    else {
+        cout << "error" << endl;
+        return -1;
+    }
     return 0;
-
 }

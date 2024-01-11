@@ -80,6 +80,10 @@ public:
     int ngx_epoll_add_event(int fd, int readevent, int writeevent, uint32_t otherflag, uint32_t eventtype, ngx_connections_t* c);
     int ngx_epoll_process_events(int timer);
 
+    void in_to_msg_recv_queue(char*, int&);
+    char* out_from_msg_recv_queue();
+    void clean_msg_recv_queue();
+    
 private:
 
     // handlers
@@ -105,8 +109,5 @@ private:
 
     std::list<char*> m_msg_recv_queue;
     int m_msg_recv_count_;
-    void in_to_msg_recv_queue(char*, int&);
-    void out_from_msg_recv_queue();
-    void clean_msg_recv_queue();
     pthread_mutex_t m_msg_recv_queue_mutex_;
 };
